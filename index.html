@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe page</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: aliceblue;
+        /* position: relative; */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+      .shoe {
+        margin-top: 4rem;
+        height: 70vh;
+        width: 80vw;
+        margin-left: 5rem;
+        /* position: relative; */
+        z-index: 5;
+        background: linear-gradient(to right, #912684, #e94254, #f16c25);
+      }
+
+      .img-shoe {
+        width: 550px;
+        height: 400px;
+        position: absolute;
+        /* z-index: 2; */
+        top: 0;
+        right: 0;
+        /* border: 4px dotted brown; */
+      }
+
+      .desc {
+        width: 50%;
+        padding: 30px;
+      }
+
+      .desc h1 {
+        font-size: xx-large;
+        color: white;
+      }
+
+      .desc p {
+        margin-top: 30px;
+        color: white;
+        font-size: large;
+      }
+
+      .container::after {
+        content: "hi";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: linear-gradient(to right, #af2e2f, #644976, #1743bd);
+        position: absolute;
+        transform: skewY(10deg);
+        z-index: -1;
+        box-shadow: 2px 2px 2px 2px rgb(175, 171, 171);
+      }
+
+      .img-shoe:hover {
+        z-index: 1000;
+        height: 650px;
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shoe">
+        <div class="desc">
+          <h1 class="h">Shoes -1</h1>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat
+            suscipit nemo velit eos pariatur corrupti? Quam pariatur porro
+            accusantium accusamus neque labore ad? Enim impedit hic molestias
+            facilis in.
+          </p>
+
+          <p class="text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dolore
+          </p>
+        </div>
+        <img class="img-shoe" alt="shoe" src="shoes.png" />
+      </div>
+    </div>
+  </body>
+</html>
